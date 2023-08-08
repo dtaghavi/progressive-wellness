@@ -1,18 +1,12 @@
-<ul class="cb-slideshow">
-    <li>
-        <span [style.background-image]="'url(' + images[0] + ')'"></span>
-        <div>Optional content here for first image</div>
-    </li>
-    <li>
-        <span [style.background-image]="'url(' + images[1] + ')'"></span>
-        <div>Optional content here for second image</div>
-    </li>
-    <li>
-        <span [style.background-image]="'url(' + images[2] + ')'"></span>
-        <div>Optional content here for third image</div>
-    </li>
-    <li>
-        <span [style.background-image]="'url(' + images[3] + ')'"></span>
-        <div>Optional content here for fourth image</div>
-    </li>
-</ul>
+<div class="slide-show-container">
+    <ng-container *ngFor="let image of images; let i = index">
+        <img [src]="image" [ngClass]="{
+            'zindex-change': i == activeImage,
+            'fade-out': i == prev
+        }">
+    </ng-container>
+
+    <div class="slide-content">
+        <ng-content></ng-content>
+    </div>
+</div>

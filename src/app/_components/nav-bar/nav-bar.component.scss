@@ -1,8 +1,10 @@
+@import '../../../styles/variables.scss';
+
 :host {
     position: fixed;
     overflow: hidden;
     width: 100vw;
-    height: 112px;
+    height: $header-height;
     
     box-sizing: border-box;
     background: white;
@@ -16,7 +18,7 @@
 
     padding: 15px 111px;
     // transition: .2s;
-    // z-index: 50;
+    z-index: 50;
 
     .nav-container {
         display: inline-flex;
