@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="nav-container">
     <div class="brand" routerLink="">
         <svg class="logo" width="226" height="83" viewBox="0 0 226 83" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <rect x="0.5" width="225" height="82.8947" fill="url(#pattern0)"/>
@@ -11,47 +11,28 @@
         </svg>   
     </div>
     
-    <!-- Mobile menu toggle -->
-    <!-- <img class="ham-menu" src="../../../assets/white-ham.svg" *ngIf="!menu.menuIsOpen" (click)="onOpen($event)">
-    <img class="ham-menu" src="../../../assets/close-icon.svg" *ngIf="menu.menuIsOpen" (click)="onClose($event)"> -->
+    <div class="mid-container">
+        <div>HOME</div>
+
+        <div>ABOUT</div>
+
+        <div>CONSIDERATIONS</div>
+
+        <div>PEPTIDE THERAPY</div>
+
+        <div>MEDICAL WEIGHT LOSS</div>
+
+        <div>REGENERATIVE</div>
+    </div>
     
     <!-- Right Side: Links -->
     <div class="link-container">
-        <div class="nav-item" routerLink="mint">
-            <div class="nav-link">DAPP</div>
+        <div class="nav-item out-line" routerLink="mint">
+            <div class="nav-link">TELEMEDICINE</div>
         </div>
 
-        <span class="dot"></span>
-
-        <div class="nav-item">
-            <a class="nav-link" href="https://vividuniverse.gitbook.io/foreverai/tokenomics/fai-token-metrics" target="_blank">TOKENOMICS</a>
-        </div>
-
-        <span class="dot"></span>
-
-        <div class="nav-item">
-            <a class="nav-link" href="https://vividuniverse.gitbook.io/foreverai/" target="_blank">WHITEPAPER</a>
-        </div>
-
-        <div class="nav-item btn-connect" (click)="handleConnectClick()">
-            <img src="../../../assets/btn.svg" alt="connect">
-            <span>{{ trimmedAddr }}</span>
+        <div class="nav-item solid">
+            <div class="nav-link">CONTACT US</div>
         </div>
     </div>
-
-    <!-- Mobile menu: Only shows when toggled and in mobile size. -->
-    <!-- <div class="mobile-menu" [ngClass]="{open: mobileToggle}">
-        <div class="nav-item">
-            <a class="nav-link" href="https://vividuniverse.gitbook.io/foreverai/tokenomics/fai-token-metrics">TOKENOMICS</a>
-        </div>
-
-        <div class="nav-item">
-            <a class="nav-link" href="https://vividuniverse.gitbook.io/foreverai/">WHITEPAPER</a>
-        </div>
-
-        <div class="nav-item btn-connect">
-            <img src="../../../assets/btn.svg" alt="connect">
-            <span>CONNECT WALLET</span>
-        </div>
-    </div> -->
 </div>

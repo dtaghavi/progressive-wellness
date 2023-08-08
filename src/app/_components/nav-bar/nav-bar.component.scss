@@ -1,90 +1,101 @@
 :host {
-    position: absolute;
+    position: fixed;
     overflow: hidden;
     width: 100vw;
-    height: 92px;
+    height: 112px;
+    
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.02);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(3.5px);
+    background: white;
+    color: black;
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.10); 
     top: 0;
+
     display: flex;
     align-items: center;
-    padding: 15px 45px;
-    transition: .2s;
-    z-index: 50;
-    * {
-        color: white;
-        font-family: "Neue Machina";
-    }
+    justify-content: center;
 
-    .container-fluid {
-        background: transparent !important;
-        height: 100%;
-        width: 100%;
-        
-        display: flex;
+    padding: 15px 111px;
+    // transition: .2s;
+    // z-index: 50;
+
+    .nav-container {
+        display: inline-flex;
         justify-content: space-between;
         align-items: center;
+        gap: 60px;
+        width: 100%;
 
         .brand {
-            cursor: pointer;
-            font-weight: 800;
-            font-size: 25px;
-            line-height: 24px;
-
+            display: flex;
+            flex: 0 1 auto;
+            height: 82.895px;
+            width: 225px;
             .logo {
-                height: auto !important;
+                height: 100%;
                 width: 100%;
             }
         }
 
+        .mid-container {
+            display: flex;
+            flex: 1 1 0px;
+            justify-content: space-around;
+            align-items: center;
+            
+            div {
+                flex: 1 1 auto;
+                display: flex;
+                // width: 65px;
+                height: 22px;
+                justify-content: center;
+                align-items: center;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 2px;
+                white-space: nowrap;
+          }
+        }
+
         .link-container {
-            flex: 1 0 0px;
+            flex: 0 1 0px;
             display: flex;
             align-items: center;
             justify-content: flex-end;
             .nav-item {
+                display: flex;
+                justify-content: center;
+                align-items: center; 
                 cursor: pointer;
-                a {
-                    text-decoration: inherit;
-                    color: inherit;
-                }
-
-                &.btn-connect {
-                    margin-left: 30px;
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                height: 48px;
+                width: 148px;
+                // padding: 8px 20px;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 39px 325%;
+                letter-spacing: 2px;
+                transition: .4s;
+                
+                &.out-line {
+                    border: 2px solid #555;
                     
                     &:hover {
-                        color: rgba(255, 255, 255, 1);
-
-                        span {
-                            text-shadow:
-                                0 0 7px #fff,
-                                0 0 10px #fff,
-                                0 0 21px #fff,
-                                0 0 42px #0fa,
-                                0 0 82px #0fa,
-                                0 0 92px #0fa,
-                                0 0 102px #0fa,
-                                0 0 151px #0fa;
-                        }
-                    }
-
-                    span {
-                        position: absolute;
+                        background: #456494;
+                        color: white;
+                        border: 2px solid #456494;
                     }
                 }
 
-                .nav-link {
-                    font-family: "Rubik";
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 16px;
-                    line-height: 19px;
+                &.solid {
+                    border: 2px solid #395998;
+                    margin-left: 20px;
+                    background: var(--progressive-blue, #395998); 
+                    color: white;
+
+                    &:hover {
+                        border: 2px solid #7391CA;
+                        background: var(--progressive-blue-hover, #7391CA);
+                    }
                 }
             }
 
@@ -96,62 +107,41 @@
                 background: #ffffff;
             }
         }
-
-        .mobile-menu {
-            position: absolute;
-            top: 100%;
-            height: calc(100vh - 92px);
-            width: 100%;
-            left: 100%;
-            opacity: 0;
-            transition: .2s linear;
-            transition-property: left,opacity;
-        }
-
-        .ham-menu {
-            cursor: pointer;
-            color: white;
-            opacity: 0;
-            height: 100%;
-            width: 35px;
-
-            transition: .2s;
-        }
     }
 }
 
 @media (max-width: 812px) {
-    :host {
-        padding: 5px 25px !important;
-        height: 66px;
-    }
-    .container-fluid {
-        .link-container {
-            display: none !important;
-        }
+    // :host {
+    //     padding: 5px 25px !important;
+    //     height: 66px;
+    // }
+    // .container-fluid {
+    //     .link-container {
+    //         display: none !important;
+    //     }
 
-        .mobile-menu {
-            &.open {
-                top: 66px;
-                height: calc(100vh - 66px);
-                left: 0 !important;
-                opacity: 1 !important;
-                transition-property: left !important;
-                z-index: 100;
-                display: flex;
-                flex-direction: column;
+    //     .mobile-menu {
+    //         &.open {
+    //             top: 66px;
+    //             height: calc(100vh - 66px);
+    //             left: 0 !important;
+    //             opacity: 1 !important;
+    //             transition-property: left !important;
+    //             z-index: 100;
+    //             display: flex;
+    //             flex-direction: column;
 
-                .nav-item {
-                    flex: 1 0 auto;
-                    background: #1a1a17;
-                    backdrop-filter: blur(3.5px);
-                }
-            }
-        }
+    //             .nav-item {
+    //                 flex: 1 0 auto;
+    //                 background: #1a1a17;
+    //                 backdrop-filter: blur(3.5px);
+    //             }
+    //         }
+    //     }
 
-        .ham-menu {
-            opacity: 1 !important;
-        }
+    //     .ham-menu {
+    //         opacity: 1 !important;
+    //     }
 
-    }
+    // }
 }

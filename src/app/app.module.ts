@@ -5,16 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './_components/nav-bar/nav-bar.component';
 import { HomeComponentModule } from './_pages/home/home.module';
-
+import { SlideshowComponent } from './_components/slide-show/slideshow.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeComponentModule
+    HomeComponentModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
