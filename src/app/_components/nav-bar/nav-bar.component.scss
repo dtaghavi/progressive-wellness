@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: center;
 
-    padding: 15px 111px;
+    padding: 15px 3%;
     // transition: .2s;
     z-index: 50;
 
@@ -24,7 +24,7 @@
         display: inline-flex;
         justify-content: space-between;
         align-items: center;
-        gap: 60px;
+        gap: 20px;
         width: 100%;
 
         .brand {
@@ -45,9 +45,9 @@
             align-items: center;
             
             div {
+                cursor: pointer;
                 flex: 1 1 auto;
                 display: flex;
-                // width: 65px;
                 height: 22px;
                 justify-content: center;
                 align-items: center;
@@ -110,40 +110,11 @@
             }
         }
     }
-}
+    // @media (max-width: 1030px) {
+    //     padding: 15px 3%;
 
-@media (max-width: 812px) {
-    // :host {
-    //     padding: 5px 25px !important;
-    //     height: 66px;
-    // }
-    // .container-fluid {
-    //     .link-container {
-    //         display: none !important;
+    //     .nav-container {
+    //         gap: 20px;
     //     }
-
-    //     .mobile-menu {
-    //         &.open {
-    //             top: 66px;
-    //             height: calc(100vh - 66px);
-    //             left: 0 !important;
-    //             opacity: 1 !important;
-    //             transition-property: left !important;
-    //             z-index: 100;
-    //             display: flex;
-    //             flex-direction: column;
-
-    //             .nav-item {
-    //                 flex: 1 0 auto;
-    //                 background: #1a1a17;
-    //                 backdrop-filter: blur(3.5px);
-    //             }
-    //         }
-    //     }
-
-    //     .ham-menu {
-    //         opacity: 1 !important;
-    //     }
-
     // }
 }
