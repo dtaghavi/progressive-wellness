@@ -64,6 +64,12 @@
             flex-direction: column;
             bottom: 10%;
         }
+
+        @media (max-width: 576px) {
+            .slide-content {
+                bottom: 6%;
+            }
+        }
     }
 }
 
